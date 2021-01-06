@@ -8,7 +8,7 @@ let &t_EI = "\<Esc>[2 q"
 " set cuc
 set cul
 set list
-set listchars=nbsp:@,trail:=
+set listchars=nbsp:@,trail:-
 set noeol
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
@@ -25,7 +25,7 @@ function! StripTrailingWhitespace()
 endfunction
 
 autocmd BufWritePre * call StripTrailingWhitespace()
-autocmd FileType vim,ruby,javascript,perl let b:noStripWhitespace=1
+autocmd FileType vim,ruby,perl let b:noStripWhitespace=1
 
 let data = readfile('C:/local/cygwin32/home/jason/filetypes.txt')
 
